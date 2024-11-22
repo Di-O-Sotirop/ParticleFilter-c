@@ -34,7 +34,7 @@ struct odom_msg_t
     double covariance_twist[36];
     
 };
-/*==============================================================*/
+/*============RAW BITS TO FLOAT64===============================*/
 double bin2f64(int* arr)
 /*==============================================================*/
 {
@@ -62,7 +62,7 @@ double bin2f64(int* arr)
     Everytime you find a comma, 
     combine the past characters into a char
 */
-/*==============================================================*/
+/*==========CONVERT READ DATA TO BYTES==========================*/
 int read_convert(char *ifilename, char *ofilename){
 /*==============================================================*/
 	FILE *ifp, *ofp;
@@ -120,7 +120,7 @@ int read_convert(char *ifilename, char *ofilename){
 	//return nlines;
 }
 
-/*==============================================================*/
+/*================DEPRICATED FUNCTION===========================*/
 int read_convert_original(char *filename){
 /*==============================================================*/
 	FILE *ifp ;
@@ -147,7 +147,7 @@ int read_convert_original(char *filename){
 	//return nlines;
 }
 
-/*==============================================================*/  
+/*==============RAWE BYTES TO FLOAT RECONSTRUCTION==============*/  
 float bin2flt(char *received_data){
 /*==============================================================*/
     union {
@@ -162,7 +162,7 @@ float bin2flt(char *received_data){
     return f1;
 }
 
-/*==============================================================*/
+/*==================DATA TO ODOMETRY STRUCT=====================*/
 struct odom_msg_t bin2odom(char *filename){
 /*==============================================================*/    
     FILE *ifp ;
