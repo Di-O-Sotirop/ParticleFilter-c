@@ -1,3 +1,5 @@
+/* Depricated out of date file, new version is kernels.c */
+
 #include "kernels.h"
 #include <stdio.h>
 #include <time.h>
